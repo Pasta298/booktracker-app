@@ -33,7 +33,7 @@ export default function MainHeader() {
               className="rounded-full bg-[#b1d9fe] flex hover:bg-[#7da9ff] active:bg-[#3d6dcc] mr-1"
               size={"icon-sm"}
             >
-              <Search stroke="black"/>
+              <Search stroke="black" className="min-w-5 min-h-5"/>
             </InputGroupButton>
           </InputGroupAddon>
         </InputGroup>
