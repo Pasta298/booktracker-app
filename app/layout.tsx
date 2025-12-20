@@ -18,7 +18,7 @@ export default function RootLayout({
           <MainHeader></MainHeader>
           <main className="flex-1">{children}</main>
         </div>
-        <div className="w-1/4 h-[95%] bg-white/85 rounded-[20px] ml-5 mr-5">
+        <div className="min-w-1/4 h-[95%] bg-white/85 rounded-[20px] ml-5 mr-5">
           <ProfileSection></ProfileSection>
         </div>
       </body>

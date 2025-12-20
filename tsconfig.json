@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/profile_section/profile_card"  ],
   "exclude": ["node_modules"]
 }
