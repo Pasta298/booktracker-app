@@ -2,6 +2,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "../../ui/button";
 import { useState } from "react";
+import ProfileSectionBlock from "./ps_block";
+import Link from "next/link";
 
 export default function ProfileSection() {
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
@@ -25,18 +27,23 @@ export default function ProfileSection() {
         </div>
 
         <div className="flex flex-col h-[50%] justify-center items-center space-y-4">
-          <div className="bg-[#f0f0f0] w-[95%] h-[35%] rounded-[10px]"></div>
-          <div className="bg-[#f0f0f0] w-[95%] h-[35%] rounded-[10px]"></div>
-          <div className="bg-[#f0f0f0] w-[95%] h-[35%] rounded-[10px]"></div>
+          <ProfileSectionBlock
+            title="Current Readings"
+            content='Harry Potter and The Prisoner of Azkaban, The Martian, Project "Hail Mary", The Name of The Wind'
+          />
+          <ProfileSectionBlock title="Books in Library" content="151" />
+          <ProfileSectionBlock title="Books Read" content="77" />
         </div>
 
         <div className="grid grid-cols-2 gap-1 space-y-1 place-items-center p-2 mt-5">
-          <Button
-            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
-            size="lg"
-          >
-            Profile
-          </Button>
+          <Link className="w-[90%]" href="/profile">
+            <Button
+              className="bg-[#d9d9d9] rounded-full w-full text-xl text-black hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
+              size="lg"
+            >
+              Profile
+            </Button>
+          </Link>
           <Button
             className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
             size="lg"

@@ -14,14 +14,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex items-center h-screen">
-        <div className="w-3/4 h-[95%] bg-white/85 rounded-[20px] ml-5 flex flex-col">
+        <div className="w-3/4 h-[95%] bg-white/85 rounded-[20px] ml-5 flex flex-col min-w-0">
           <MainHeader />
           <main className="flex-1 overflow-y-auto custom-content-scroll mr-1 mt-1 mb-4">
             {children}
           </main>
         </div>
-        <div className="min-w-1/4 h-[95%] bg-white/85 rounded-[20px] ml-5 mr-5">
-          <ProfileSection></ProfileSection>
+        <div className="w-1/4 h-[95%] bg-white/85 rounded-[20px] ml-5 mr-5">
+          <ProfileSection />
         </div>
       </body>
     </html>
