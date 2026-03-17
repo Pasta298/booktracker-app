@@ -17,9 +17,11 @@ export default function ProfileSection() {
     `}
       >
         <div className="flex flex-col h-70 justify-center items-center">
-          <Avatar className="w-40 h-40 border-4 border-gray-500">
-            <AvatarImage src="/avatar.png" />
-            <AvatarFallback>CN</AvatarFallback>
+          <Avatar asChild className="w-40 h-40 border-4 border-gray-500">
+            <Link href="/profile">
+              <AvatarImage src="/avatar.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Link>
           </Avatar>
           <h1 className="mt-6 text-[30px] text-center font-semibold">
             Welcome back, User!
@@ -36,32 +38,35 @@ export default function ProfileSection() {
         </div>
 
         <div className="grid grid-cols-2 gap-1 space-y-1 place-items-center p-2 mt-5">
-          <Link className="w-[90%]" href="/profile">
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
+          >
+            <Link href="/profile">Profile</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
+          >
+            <Link href="/current">My Books</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
+          >
+            <Link href="/calendar">Calendar</Link>
+          </Button>
+          <div className="w-[90%]">
             <Button
-              className="bg-[#d9d9d9] rounded-full w-full text-xl text-black hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
+              className="bg-[#d9d9d9] rounded-full text-xl text-black w-full hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
               size="lg"
             >
-              Profile
+              Log Out
             </Button>
-          </Link>
-          <Button
-            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
-            size="lg"
-          >
-            My Books
-          </Button>
-          <Button
-            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
-            size="lg"
-          >
-            Calendar
-          </Button>
-          <Button
-            className="bg-[#d9d9d9] rounded-full text-xl text-black w-[90%] hover:bg-[#d4ecff] active:bg-[#3d6dcc]"
-            size="lg"
-          >
-            Log Out
-          </Button>
+          </div>
         </div>
       </div>
 

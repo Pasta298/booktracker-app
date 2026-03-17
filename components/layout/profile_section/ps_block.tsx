@@ -28,12 +28,14 @@ export default function ProfileSectionBlock({
 
   return (
     <div className="bg-[#f0f0f0] w-[95%] h-[35%] rounded-[10px] p-3 flex flex-col overflow-hidden">
-      <h1 className="font-bold text-[24px] shrink-0 break-words">{title}</h1>
+      <h1 className="font-bold text-[24px] shrink-0 wrap-break-word">
+        {title}
+      </h1>
 
       <div className="flex items-center h-full">
         <p
           ref={textRef}
-          className="text-[22px] line-clamp-2 break-words"
+          className="text-[22px] line-clamp-2 wrap-break-word"
           title={isOverflowed ? content : ""}
         >
           {content}
