@@ -12,7 +12,7 @@ export default function PlLeftBar() {
   ];
 
   return (
-    <div className="mt-2 ml-2 w-[25%] h-full">
+    <div className="mt-2 ml-1 w-[25%] h-full">
       <div className="w-full h-[35%]">
         <h1 className="font-bold text-3xl">Currently Reading</h1>
         <div className="flex flex-row mt-2 h-[82%] bg-[#f0f0f0] rounded-[20px] pt-2">

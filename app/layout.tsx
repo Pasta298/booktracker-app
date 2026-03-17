@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className="flex items-center h-screen">
         <div className="w-3/4 h-[95%] bg-white/85 rounded-[20px] ml-5 flex flex-col min-w-0">
           <MainHeader />
-          <main className="flex-1 overflow-y-auto custom-content-scroll mr-1 mt-1 mb-4">
+          <main className="flex-1 overflow-y-auto custom-content-scroll ml-1 mr-1 mt-1 mb-4">
             {children}
           </main>
         </div>
