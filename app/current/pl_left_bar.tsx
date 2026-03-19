@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import PlBook from "./pl_book";
 import Link from "next/link";
 
-export default function PlLeftBar() {
-  const percent = 37;
-
+export default function PlLeftBar({ percent }: { percent: number }) {
   const books = [
     { id: 1, name: "1984", author: "George Orwell" },
     { id: 2, name: "Dune", author: "Frank Herbert" },
@@ -15,7 +13,10 @@ export default function PlLeftBar() {
     <div className="mt-2 ml-1 w-[25%] h-full">
       <div className="w-full h-[35%]">
         <h1 className="font-bold text-3xl">Currently Reading</h1>
-        <div className="flex flex-row mt-2 h-[82%] bg-[#f0f0f0] rounded-[20px] pt-2">
+        <Link
+          href="/book"
+          className="flex flex-row mt-2 h-[82%] bg-[#f0f0f0] rounded-[20px] pt-2"
+        >
           <div className="bg-[#c7c8c9] h-[95%] w-[40%] rounded-2xl ml-2" />
           <div className="flex flex-col w-[52%] h-[95%] ml-2 justify-center">
             <h1 className="font-bold text-xl">Name</h1>
@@ -28,7 +29,7 @@ export default function PlLeftBar() {
             </div>
             <h2>{percent}% completed</h2>
           </div>
-        </div>
+        </Link>
       </div>
       <div className="w-full h-[67%]">
         <div className="flex justify-between items-center mt-2">

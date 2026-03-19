@@ -32,12 +32,14 @@ export default function MainHeader() {
             placeholder="Type a name of book or ISBN"
           />
           <InputGroupAddon align="inline-end">
-            <InputGroupButton
-              className="rounded-full bg-[#b1d9fe] flex hover:bg-[#7da9ff] active:bg-[#3d6dcc] mr-1"
-              size={"icon-sm"}
-            >
-              <Search stroke="black" className="min-w-5 min-h-5" />
-            </InputGroupButton>
+            <Link href="/search">
+              <InputGroupButton
+                className="rounded-full bg-[#b1d9fe] flex hover:bg-[#7da9ff] active:bg-[#3d6dcc] mr-1"
+                size={"icon-sm"}
+              >
+                <Search stroke="black" className="min-w-5 min-h-5" />
+              </InputGroupButton>
+            </Link>
           </InputGroupAddon>
         </InputGroup>
       </div>

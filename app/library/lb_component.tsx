@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Ellipsis, Octagon, X } from "lucide-react";
+import Link from "next/link";
 
 type BookStatus = "finished" | "reading" | "postponed" | "dnf";
 
@@ -38,7 +40,10 @@ export default function LibraryBookComponent({
   const current = statusConfig[status];
 
   return (
-    <div className="relative flex w-[445px] h-[250px] p-2 rounded-[20px] bg-white shadow-[1px_1px_4px_0_rgba(0,0,0,0.3)]">
+    <Link
+      href="/book"
+      className="relative flex w-[445px] h-[250px] p-2 rounded-[20px] bg-white shadow-[1px_1px_4px_0_rgba(0,0,0,0.3)]"
+    >
       <div className="bg-[#c7c8c9] h-full w-[35%] rounded-[14px]" />
 
       <div className="flex flex-col justify-between w-[52%] h-[95%] ml-3 mt-2">
@@ -55,7 +60,13 @@ export default function LibraryBookComponent({
       </div>
 
       <div className="flex flex-col justify-between">
-        <Button className="rounded-full w-10 h-10 ml-2 hover:bg-gray-600 active:bg-black">
+        <Button
+          className="rounded-full w-10 h-10 ml-2 hover:bg-gray-600 active:bg-black"
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+          }}
+        >
           <Ellipsis className="size-9" />
         </Button>
         <div
@@ -64,6 +75,6 @@ export default function LibraryBookComponent({
           {current.icon}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
