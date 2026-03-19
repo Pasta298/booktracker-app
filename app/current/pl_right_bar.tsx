@@ -15,7 +15,7 @@ export default function PlRightBar() {
     Will his resourcefulness be enough to overcome the impossible odds against him?`;
 
   return (
-    <div className="m-2 p-3 w-[75%] h-full bg-gray-200 rounded-[20px]">
+    <div className="m-1 p-3 w-[75%] h-full bg-gray-200 rounded-[20px]">
       <div className="flex flex-row h-[50%]">
         <div className="bg-[#c7c8c9] h-full w-[25%] rounded-[12px]" />
         <div className="flex flex-col ml-4 w-[72%] gap-1">

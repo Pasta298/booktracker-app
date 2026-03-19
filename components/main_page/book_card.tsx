@@ -18,7 +18,7 @@ export default function BookCard({
     >
       <div className="bg-[#d4ecff] mt-4 w-[85%] flex-4 rounded-[6px]"></div>
 
-      <div className="flex justify-between items-center w-[85%] flex-1 mt-1">
+      <div className="flex justify-between items-center w-[85%] flex-1 mt-1 gap-1">
         <div className="flex flex-col min-w-0">
           <span className="font-bold truncate">{name}</span>
           <span className="text-[#989898] font-semibold truncate">
@@ -27,7 +27,7 @@ export default function BookCard({
         </div>
 
         <Button
-          className="rounded-full w-10 h-10 bg-[#3d6dcc] p-0 hover:bg-[#4e9d85] hover:outline-none"
+          className="rounded-full w-10 h-10 bg-[#3d6dcc] p-0 hover:bg-[#4bb12f] hover:outline-none"
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
