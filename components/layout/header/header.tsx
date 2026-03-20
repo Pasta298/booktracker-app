@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function MainHeader() {
   return (
-    <header className="flex w-full min-h-[60px] h-[15%] bg-[#3d6dcc] rounded-t-[20px] items-center pl-6 pr-6">
+    <header className="flex w-full min-h-[60px] h-[15%] bg-[#3d6dcc] rounded-t-[20px] shadow-[0_2px_4px_0_rgba(0,0,0,0.3)] items-center pl-6 pr-6">
       <div className="flex items-center shrink-0 h-[65%]">
         <Link href="/">
           <Image

@@ -24,7 +24,12 @@ export default function ProfileSectionBlock({
               {content}
             </p>
           </TooltipTrigger>
-          <TooltipContent side={"bottom"}>{content}</TooltipContent>
+          <TooltipContent
+            side={"bottom"}
+            className="max-w-xs whitespace-normal wrap-break-word"
+          >
+            {content}
+          </TooltipContent>
         </div>
       </Tooltip>
     </div>
