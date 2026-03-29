@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function MainHeader() {
   return (
-    <header className="flex w-full min-h-[60px] h-[15%] bg-[#3d6dcc] rounded-t-[20px] shadow-[0_2px_4px_0_rgba(0,0,0,0.3)] items-center pl-6 pr-6">
+    <header className="flex w-full min-h-15 h-[15%] bg-[#3d6dcc] rounded-t-[20px] shadow-[0_2px_4px_0_rgba(0,0,0,0.3)] items-center pl-6 pr-6">
       <div className="flex items-center shrink-0 h-[65%]">
         <Link href="/">
           <Image
@@ -19,7 +19,7 @@ export default function MainHeader() {
             width={0}
             height={0}
             sizes="15vw"
-            className="w-[15vw] max-w-[380px] min-w-[170px] max-h-[70px] h-auto object-contain"
+            className="w-[15vw] max-w-95 min-w-42.5 max-h-17.5 h-auto object-contain"
             priority
           />
         </Link>

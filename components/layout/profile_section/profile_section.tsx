@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function ProfileSection() {
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
-
+  
   return (
     <div className="relative h-full">
       <div
@@ -74,28 +74,28 @@ export default function ProfileSection() {
         <div className="absolute inset-0 z-20 flex items-center justify-center ">
           <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-[20px]" />
 
-          <div className="relative z-30 bg-[#d9d9d9] rounded-xl p-6 w-[90%] max-w-[400px] text-center shadow-xl">
+          <div className="relative z-30 bg-[#d9d9d9] rounded-xl p-6 w-[90%] max-w-100 text-center shadow-xl">
             <h2 className="text-2xl font-semibold mb-2">
               You are not logged into account!
             </h2>
             <p className="text-gray-600 mb-2">
               Please log in to access your profile
             </p>
-            <Button
-              className="w-[80%] text-lg rounded-full mb-2 hover:bg-gray-600 active:bg-black"
-              onClick={() => setIsAuthorized(true)}
-            >
-              Log In
-            </Button>
+            <Link href="/login">
+              <Button className="w-[80%] text-lg rounded-full mb-2 hover:bg-gray-600 active:bg-black">
+                Log In
+              </Button>
+            </Link>
             <h2 className="text-lg font-semibold mb-2">
               Don&apos;t have an account yet?
             </h2>
-            <Button
-              className="w-[80%] text-lg rounded-full mb-2 hover:bg-gray-600 active:bg-black"
-              onClick={() => setIsAuthorized(true)}
-            >
-              Sign In
-            </Button>
+            <Link href="/signup">
+              <Button
+                className="w-[80%] text-lg rounded-full mb-2 hover:bg-gray-600 active:bg-black"
+              >
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       )}

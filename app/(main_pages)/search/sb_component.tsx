@@ -11,7 +11,7 @@ export default function SearchedBookComponent() {
   some respite. Yet Empress Laseen's rule remains absolute, enforced by her dread Claw assassins...`;
 
   return (
-    <div className="flex w-full h-[300px] p-3">
+    <div className="flex w-full h-75 p-3">
       <div className="flex flex-row p-3 w-full h-full bg-[#f0f0f0] rounded-[20px]">
         <div className="flex flex-row w-[40%] h-full">
           <div className="bg-[#c7c8c9] h-full w-[35%] rounded-[12px]" />

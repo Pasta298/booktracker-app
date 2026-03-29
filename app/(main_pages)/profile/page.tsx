@@ -155,7 +155,7 @@ export default function Profile() {
                       setInputValue("");
                     }
                   }}
-                  className="h-9 py-1 px-3 w-[150px] rounded-full bg-[#3d6dcc] text-white font-bold text-sm"
+                  className="h-9 py-1 px-3 w-37.5 rounded-full bg-[#3d6dcc] text-white font-bold text-sm"
                   placeholder="Genre..."
                 />
                 <Button
